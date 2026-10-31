@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bui Vu Duc Tam – Marketing Portfolio</title>
+<meta name="description" content="Marketing portfolio of Bui Vu Duc Tam: social media, content marketing and event coordination.">
+<!--
+CÁCH SỬA FILE NÀY
+1. Chữ: tìm đoạn cần sửa và gõ lại. Mọi chỗ cần bạn điền được đánh dấu bằng <mark class="todo">…</mark>. Tìm "todo" để thấy hết.
+2. Ảnh: ảnh nằm trong thuộc tính data-s="đường-dẫn|chú thích;đường-dẫn|chú thích". Thay ảnh = tải file mới lên GitHub với ĐÚNG TÊN CŨ.
+3. Logo: nằm trong data-l="đường-dẫn|tên;…". Nếu chưa có file, trang tự hiện tên chữ.
+4. Ảnh chưa có file sẽ hiện ô nét đứt ghi tên file cần tải lên.
+5. Trước khi công khai: xóa hết <mark class="todo"> còn sót và kiểm tra các nút link href="#".
+-->
+<style>
+:root{--bg:#fff;--fg:#1d1d1f;--mut:#6e6e73;--card:#f5f5f7;--line:#d2d2d7;--teal:#0b5560;--on:#fff;--todo:#fff3b0;color-scheme:light dark}
+@media (prefers-color-scheme:dark){:root{--bg:#000;--fg:#f5f5f7;--mut:#a1a1a6;--card:#1c1c1e;--line:#3a3a3c;--teal:#5cc0cc;--on:#00262b;--todo:#4a4100}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:64px}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 -apple-system,BlinkMacSystemFont,"SF Pro Text","Inter","Segoe UI",Roboto,Helvetica,Arial,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--teal)}
+img{max-width:100%}
+nav{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:calc(12px + env(safe-area-inset-top,0px)) 24px 12px;background:color-mix(in srgb,var(--bg) 82%,transparent);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+nav b{font-size:19px;letter-spacing:-.02em}
+nav div{display:flex;gap:20px;overflow-x:auto;white-space:nowrap;font-size:14px}
+nav a{color:var(--mut);text-decoration:none}
+nav a:hover,nav a:focus-visible{color:var(--fg)}
+section,header{padding:96px 24px;max-width:1080px;margin:0 auto}
+h1{font-size:clamp(56px,12vw,148px);line-height:.92;letter-spacing:-.045em;margin:0 0 24px;font-weight:800}
+h2{font-size:clamp(36px,6vw,64px);line-height:1.04;letter-spacing:-.035em;margin:0 0 32px;font-weight:700}
+h3{font-size:28px;letter-spacing:-.02em;margin:48px 0 8px}
+h4{font-size:15px;color:var(--mut);margin:28px 0 6px;font-weight:600}
+p,li{max-width:68ch}
+.lead{font-size:clamp(20px,2.6vw,28px);line-height:1.35;color:var(--mut);max-width:30em}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:end;min-height:88vh}
+.hero .slot{border:0;background:none}
+.hero .slot img{object-fit:contain;aspect-ratio:3/4}
+.btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{display:inline-block;padding:12px 24px;border-radius:980px;background:var(--teal);color:var(--on);text-decoration:none;font-weight:600}
+.btn.alt{background:none;color:var(--teal);box-shadow:inset 0 0 0 1.5px var(--teal)}
+.band{background:var(--card);max-width:none}
+.band>div{max-width:1032px;margin:0 auto}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:32px;margin:40px 0}
+.stats b{display:block;font-size:clamp(40px,6vw,64px);letter-spacing:-.04em;line-height:1;color:var(--teal)}
+.stats span{color:var(--mut);font-size:15px}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:15px}
+th,td{text-align:left;padding:12px 12px 12px 0;border-bottom:1px solid var(--line);vertical-align:top}
+th{color:var(--mut);font-weight:600}
+.tw{overflow-x:auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:16px;margin:20px 0}
+.slot{margin:0;border-radius:14px;overflow:hidden;background:var(--card);border:1px solid var(--line)}
+.slot img{display:block;width:100%;aspect-ratio:16/10;object-fit:contain;background:var(--card)}
+.slot figcaption{padding:8px 12px;font-size:13px;color:var(--mut)}
+.slot.miss img{display:none}
+.slot.miss{border:1.5px dashed var(--line);background:none;min-height:130px;display:flex;flex-direction:column;justify-content:center;text-align:center}
+.slot.miss::before{content:attr(data-file);padding:12px;font:12px ui-monospace,Menlo,monospace;color:var(--mut);word-break:break-all}
+.logos{display:flex;flex-wrap:wrap;gap:12px 28px;align-items:center;margin:20px 0;color:var(--mut);font-weight:600}
+.logo img{height:30px;width:auto;display:block}
+.todo,mark.todo{background:var(--todo);color:inherit;padding:0 4px;border-radius:4px}
+ul{padding-left:20px}
+li{margin:6px 0}
+.tl{list-style:none;padding:0}
+.tl li{display:grid;grid-template-columns:150px 1fr;gap:16px;padding:12px 0;border-bottom:1px solid var(--line);max-width:none}
+.card{margin-top:56px;padding-top:8px;border-top:1px solid var(--line)}
+footer{padding:48px 24px calc(48px + env(safe-area-inset-bottom,0px));text-align:center;color:var(--mut);font-size:14px}
+:focus-visible{outline:2px solid var(--teal);outline-offset:3px}
+@media(max-width:720px){section,header{padding:64px 20px}.hero{grid-template-columns:1fr;min-height:0}.tl li{grid-template-columns:1fr;gap:2px}nav{padding-left:16px;padding-right:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<nav>
+  <b>TAM.</b>
+  <div><a href="#overview">Overview</a><a href="#experience">Experience</a><a href="#event">Events</a><a href="#projects">Projects</a><a href="#beyond">Beyond marketing</a><a href="#contact">Contact</a></div>
+</nav>
+
+<header class="hero">
+  <div>
+    <p style="color:var(--mut);margin:0 0 16px">Marketing portfolio</p>
+    <h1>Bui Vu<br>Duc Tam.</h1>
+    <p class="lead">Social media, content marketing and event coordination.</p>
+    <p style="color:var(--mut)">Junior Marketing Executive <mark class="todo">chốt một chức danh, dùng giống LinkedIn và CV</mark></p>
+    <div class="btns"><a class="btn" href="#overview">Explore my work</a><a class="btn alt" href="assets/files/portfolio-bui-vu-duc-tam.pdf">Download PDF</a></div>
+  </div>
+  <div data-s="assets/brand/portrait.webp|Bui Vu Duc Tam"></div>
+</header>
+
+<!-- ===== OVERVIEW ===== -->
+<section id="overview">
+  <h2>I turn research into content people actually read.</h2>
+  <p class="lead">I build and run social content for brands: researching the audience, planning the calendar, writing, briefing design and video, and reading the numbers to improve the next post. I work best where creativity meets a repeatable process.</p>
+  <ul>
+    <li><b>Multiply ideas</b> with systems thinking.</li>
+    <li><b>Execute fast</b> with the right tools.</li>
+    <li><b>Hand over cleanly</b> with a coherent process.</li>
+  </ul>
+  <p>Currently managing content across 10 pages at Medivis International Dental Clinic.</p>
+
+  <div class="stats">
+    <div><b>10</b><span>pages managed at Medivis <mark class="todo">khớp với “05+ channels” trong PDF</mark></span></div>
+    <div><b>700+</b><span>webinar attendees, ZA Office series <mark class="todo">cần ảnh báo cáo</mark></span></div>
+    <div><b>252.5K</b><span>views on the best TikTok video</span></div>
+    <div><b>2,400+</b><span>HomeyNest followers in 5 months</span></div>
+  </div>
+
+  <h4>Tools</h4>
+  <div class="logos" data-l="assets/logos/ga4.svg|Google Analytics;assets/logos/meta.svg|Meta Business Suite;assets/logos/search-console.svg|Search Console;assets/logos/tiktok.svg|TikTok Studio;assets/logos/canva.svg|Canva;assets/logos/capcut.svg|CapCut;assets/logos/lark.svg|Lark;assets/logos/crm.svg|CRM"></div>
+  <mark class="todo">Chỉ giữ công cụ bạn thật sự dùng</mark>
+
+  <h4>Where I have worked and studied</h4>
+  <ul class="tl">
+    <li><span class="todo">thời gian</span><span><b>Medivis</b> – social media and content, 10 pages (current)</span></li>
+    <li><span class="todo">thời gian</span><span><b>ZA Office</b> – Assistant to Director / Social Media</span></li>
+    <li><span class="todo">thời gian</span><span><b>Saigon Cadastral Company</b> – Administrative Assistant / Social Media</span></li>
+    <li><span class="todo">thời gian</span><span><b>HCMC Union of Friendship Organizations (HUFO)</b> – External Relations Intern</span></li>
+    <li><span class="todo">năm</span><span><b>HCMC University of Economics and Finance</b> – Diplomatic Operations, International Relations</span></li>
+  </ul>
+  <div class="logos" data-l="assets/logos/medivis.svg|Medivis;assets/logos/za-office.svg|ZA Office;assets/logos/saigon-cadastral.svg|Saigon Cadastral;assets/logos/hufo.svg|HUFO;assets/logos/university.svg|University of Economics and Finance"></div>
+
+  <h4>Recognition and activities</h4>
+  <ul>
+    <li>Second Runner-up (3rd place), Think Out Loud Oratory Competition, V-Lotus Project 2024 <a href="#">Read the article</a> <mark class="todo">gắn link bài viết</mark></li>
+    <li>Semi-finalist, Personal Branding – Youbranding Contest 2022</li>
+    <li>Semi-finalist, DE Speechless Debate Open 2022 (Green Journals)</li>
+    <li>Team PR, Master of Speech Club · Team Planner, International Relations Event Club</li>
+  </ul>
+  <div class="grid" data-s="assets/files/cert-think-out-loud-2024.jpg|Certificate, Think Out Loud 2024"></div>
+</section>
+
+<!-- ===== EXPERIENCE ===== -->
+<section id="experience" class="band"><div>
+  <h2>Professional experience</h2>
+
+  <!-- Medivis -->
+  <h3>Medivis International Dental Clinic</h3>
+  <p style="color:var(--mut)">Social media and content, 10 pages · current</p>
+  <h4>Context</h4>
+  <p>Medivis is an international dental clinic running 10 social media pages. <mark class="todo">nhóm khách hàng mục tiêu và mục tiêu của các page</mark></p>
+  <h4>My role</h4>
+  <p><mark class="todo">chức danh chính xác</mark>, working with an in-house media team. I manage content across all 10 pages, directly own the main page <mark class="todo">tên page</mark>, and brief and review design and video work with the media team.</p>
+  <h4>What I did</h4>
+  <ul>
+    <li><b>Content and channels:</b> planned content, wrote posts and managed publishing across 10 pages.</li>
+    <li><b>Visuals:</b> wrote design and editing briefs for the media team; produced basic designs and edits myself.</li>
+    <li><b>Advertising content:</b> wrote ad copy and video ad scripts.</li>
+    <li><b>Internal programs:</b> organized <mark class="todo">tên chương trình</mark> for <mark class="todo">số người / đối tượng</mark>.</li>
+  </ul>
+  <h4>Results</h4>
+  <div class="tw"><table>
+    <tr><th>Metric</th><th>Value</th><th>Period</th><th>Source</th></tr>
+    <tr><td>Posts per month, 10 pages</td><td><mark class="todo">số</mark></td><td><mark class="todo">tháng</mark></td><td>Content calendar</td></tr>
+    <tr><td>Reach or engagement, main page</td><td><mark class="todo">số</mark></td><td><mark class="todo">tháng</mark></td><td>Meta Insights</td></tr>
+    <tr><td>Follower growth, main page</td><td><mark class="todo">số</mark></td><td><mark class="todo">tháng</mark></td><td>Meta Insights</td></tr>
+  </table></div>
+  <h4>What I learned</h4>
+  <p><mark class="todo">một thay đổi cụ thể trong cách làm sau khi xem dữ liệu hoặc phản hồi</mark></p>
+  <div class="grid" data-s="assets/medivis/med-02-pages-grid.png|The 10 pages;assets/medivis/med-03-content-calendar.png|Monthly content calendar;assets/medivis/med-07-main-page-insights.png|Main page insights;assets/medivis/med-04-post.png|Sample post;assets/medivis/med-05-post.png|Sample post;assets/medivis/med-06-post.png|Sample post;assets/medivis/med-08-ad-copy.png|Ad copy sample;assets/medivis/med-09-ad-copy.png|Ad copy sample;assets/medivis/med-10-ad-copy.png|Ad copy sample;assets/medivis/med-11-video-script.png|Video ad script;assets/medivis/med-12-video-script.png|Video ad script;assets/medivis/med-13-design-brief.png|Design brief to the media team;assets/medivis/med-14-internal-event.jpg|Internal program"></div>
+
+  <!-- ZA Office -->
+  <div class="card"></div>
+  <h3>ZA Office</h3>
+  <p style="color:var(--mut)">Multi-channel content for a legal, accounting and tax advisory · Assistant to Director / Social Media <mark class="todo">thời gian</mark></p>
+  <h4>Context</h4>
+  <p>ZA Office provides legal, accounting and tax support for SMEs and household businesses.</p>
+  <h4>What I did</h4>
+  <ul>
+    <li>Planned and published content across Facebook, LinkedIn, the website and email, and tracked the customer funnel.</li>
+    <li>Read Google Analytics, Search Console and CRM data to improve lead quality and conversion.</li>
+    <li>Coordinated B2B partners and events with Matbao Invoice, VTC Pos and 1C Vietnam, plus OneAds, Lark, Canon, Tendoo, SIA Media, Zafago, DigiSource, Talent Hunter and Mini AI.</li>
+    <li>Supported the Director with CRM data, performance reports, partner care and scheduling.</li>
+  </ul>
+  <p><mark class="todo">1 câu về phần bạn trực tiếp làm so với team</mark></p>
+  <h4>Results</h4>
+  <div class="tw"><table>
+    <tr><th>Channel</th><th>Result</th><th>Period</th></tr>
+    <tr><td>Facebook</td><td>Peak of 14,276 views in one week (+548% vs the previous 7 days)</td><td>16–22 Jan 2026</td></tr>
+    <tr><td>Website, Search Console</td><td>76.5K search impressions, 1.3K clicks, average position 8.7 <mark class="todo">ghi trang/bài bạn viết hoặc tối ưu</mark></td><td>28 days to 22 Jan 2026</td></tr>
+    <tr><td>Website, GA4</td><td>1.6K new users</td><td>28 days to 22 Jan 2026</td></tr>
+    <tr><td>LinkedIn</td><td>340 impressions, 10 reactions, 36 comments</td><td>7–21 Jan 2026</td></tr>
+    <tr><td>Customer conversions</td><td>20+ per month <mark class="todo">cần ảnh CRM và định nghĩa “conversion”</mark></td><td><mark class="todo">thời gian</mark></td></tr>
+    <tr><td>Webinar series</td><td>700+ total attendees <mark class="todo">số buổi, thời gian, ảnh báo cáo</mark></td><td><mark class="todo">thời gian</mark></td></tr>
+  </table></div>
+  <h4>Webinar series</h4>
+  <p>“ZA Smart Operation Series: Smart Operations – Sustainable Growth for SMEs &amp; Household Businesses”, co-organized with Matbao Invoice, VTC Pos and 1C Vietnam. <mark class="todo">dưới mỗi poster ghi phần việc của bạn</mark></p>
+  <div class="grid" data-s="assets/za-office/za-02-facebook-page.png|ZA Office Facebook page;assets/za-office/za-03-facebook-insights.png|Facebook Insights · 16–22 Jan 2026;assets/za-office/za-04-linkedin.png|LinkedIn analytics · 7–21 Jan 2026;assets/za-office/za-05-search-console.png|Search Console · 28 days;assets/za-office/za-06-ga4.png|GA4 · 28 days;assets/za-office/za-07-crm-conversions.png|CRM conversions (blurred);assets/za-office/za-08-webinar-report.png|Webinar registration report;assets/za-office/za-09-webinar-poster.png|Webinar poster;assets/za-office/za-10-webinar-poster.png|Webinar poster;assets/za-office/za-11-webinar-poster.png|Webinar poster;assets/za-office/za-12-webinar-poster.png|Webinar poster;assets/za-office/za-13-webinar-poster.png|Webinar poster;assets/za-office/za-14-webinar-poster.png|Webinar poster;assets/za-office/za-15-event-photo.jpg|On-site team photo"></div>
+  <h4>Partners</h4>
+  <div class="logos" data-l="assets/logos/matbao.svg|Matbao Invoice;assets/logos/vtc-pos.svg|VTC Pos;assets/logos/1c.svg|1C Vietnam;assets/logos/oneads.svg|OneAds;assets/logos/lark.svg|Lark;assets/logos/canon.svg|Canon;assets/logos/tendoo.svg|Tendoo;assets/logos/sia-media.svg|SIA Media;assets/logos/zafago.svg|Zafago;assets/logos/digisource.svg|DigiSource;assets/logos/talent-hunter.svg|Talent Hunter;assets/logos/mini-ai.svg|Mini AI"></div>
+</div></section>
+
+<!-- ===== EVENTS (HUFO) ===== -->
+<section id="event">
+  <h2>Event and partnership</h2>
+  <h3 style="margin-top:0">HCMC Union of Friendship Organizations (HUFO)</h3>
+  <p style="color:var(--mut)">External Relations Intern · a people-to-people diplomacy organization</p>
+  <ul>
+    <li>Helped organize and support 10+ foreign affairs, diplomatic and cultural exchange events, with 100–500+ guests per event.</li>
+    <li>Worked with 8+ diplomatic agencies and international organizations, including representatives from the US, Russia, Germany, the Philippines and Cuba.</li>
+    <li>Supported high-level events: diplomatic ceremonies (a Consul General farewell, international commemorative medals), 5+ programs celebrating bilateral and multilateral relations, and international cultural and friendship exchanges.</li>
+    <li>Received and supported 20+ high-level guests.</li>
+    <li>Suoi Tien Farm Festival 2025, the 21st Southern Fruit Festival (500+ attendees): selected to support the HUFO Vice President, in charge of on-site coordination, foreign affairs reception and handling issues during the event. <mark class="todo">xin phép HUFO trước khi nêu tên người</mark></li>
+  </ul>
+  <p>What carries over to marketing: event logistics, partner communication and on-site problem solving.</p>
+  <div class="grid" data-s="assets/hufo/hf-02-event.jpg|Event photo;assets/hufo/hf-03-event.jpg|Event photo;assets/hufo/hf-04-event.jpg|Event photo;assets/hufo/hf-05-event.jpg|Event photo;assets/hufo/hf-06-event.jpg|Event photo;assets/hufo/hf-07-event.jpg|Event photo;assets/hufo/hf-08-suoi-tien.jpg|Suoi Tien Farm Festival 2025;assets/hufo/hf-09-confirmation.jpg|Confirmation from HUFO"></div>
+</section>
+
+<!-- ===== PROJECTS ===== -->
+<section id="projects" class="band"><div>
+  <h2>Selected projects</h2>
+
+  <h3 style="margin-top:0">Thông Truyền Tin</h3>
+  <p style="color:var(--mut)">TikTok channel on critical thinking and presentation skills · <mark class="todo">ghi kênh thuộc về ai và phần việc của bạn</mark></p>
+  <ul>
+    <li>Produced, edited and published short educational videos; used viewer-retention data to adjust effects, pacing and scripts.</li>
+    <li>30 educational videos in 4 months.</li>
+    <li>3 videos above 100K views (252.5K, 138K, 111.7K) and 2 near 100K (97.7K, 85.7K).</li>
+    <li>Average of 20,000+ views per video <mark class="todo">cách tính</mark>.</li>
+  </ul>
+  <p><a class="btn alt" href="#">View channel</a> <mark class="todo">gắn link kênh</mark></p>
+  <div class="grid" data-s="assets/tiktok-thong-truyen-tin/tt-01-profile.png|Channel profile;assets/tiktok-thong-truyen-tin/tt-02-top-videos.png|Top videos;assets/tiktok-thong-truyen-tin/tt-03-analytics.png|TikTok Analytics: retention and traffic;assets/tiktok-thong-truyen-tin/tt-04-script.png|Script or editing timeline"></div>
+
+  <div class="card"></div>
+  <h3>Giai điệu ngôn từ</h3>
+  <p style="color:var(--mut)">TikTok channel analyzing the meaning of music videos · founder</p>
+  <ul>
+    <li>Created the concepts and content from scratch, edited the visuals and used TikTok Analytics to adjust content to audience preferences.</li>
+    <li>20,000+ total likes in 2 months.</li>
+    <li>Best video: 130K+ views and 10K+ likes; multiple videos above 10K views.</li>
+  </ul>
+  <p><a class="btn alt" href="#">View channel</a> <mark class="todo">gắn link kênh</mark></p>
+  <div class="grid" data-s="assets/tiktok-giai-dieu-ngon-tu/gd-01-profile.png|Channel profile;assets/tiktok-giai-dieu-ngon-tu/gd-02-top-video.png|Best video;assets/tiktok-giai-dieu-ngon-tu/gd-03-analytics.png|TikTok Analytics"></div>
+
+  <div class="card"></div>
+  <h3>HomeyNest</h3>
+  <p style="color:var(--mut)">Facebook page about serviced apartment rentals · founder</p>
+  <ul>
+    <li>Created concepts and produced content from scratch, ran the content calendar and kept publishing on plan.</li>
+    <li>2,400+ followers in 5 months.</li>
+    <li>At least 1 rental contract per month <mark class="todo">bằng chứng, làm mờ thông tin khách</mark>.</li>
+  </ul>
+  <p><a class="btn alt" href="#">View page</a> <mark class="todo">gắn link page và Instagram</mark></p>
+  <div class="grid" data-s="assets/homeynest/hn-02-profile.png|Page profile;assets/homeynest/hn-01-sample-post.png|Sample post;assets/homeynest/hn-03-followers.png|Follower growth by month;assets/homeynest/hn-04-contract-proof.png|Rental enquiry or contract (blurred)"></div>
+
+  <div class="card"></div>
+  <h3>Đo vẽ – Thủ tục nhà đất</h3>
+  <p style="color:var(--mut)">Facebook page on real estate legal procedures in HCMC · Saigon Cadastral Company</p>
+  <ul>
+    <li>Brainstormed ideas, wrote posts and designed 100% of the images; adjusted formats based on audience feedback and behavior.</li>
+    <li>Steady publishing rhythm of at least 5 posts per week.</li>
+  </ul>
+  <div class="grid" data-s="assets/do-ve/dv-01-profile.png|Page profile;assets/do-ve/dv-02-design.png|Post design;assets/do-ve/dv-03-design.png|Post design;assets/do-ve/dv-04-design.png|Post design;assets/do-ve/dv-06-calendar.png|Weekly content calendar"></div>
+</div></section>
+
+<!-- ===== BEYOND ===== -->
+<section id="beyond">
+  <h2>Beyond marketing</h2>
+  <h3 style="margin-top:0">Teaching life and soft skills</h3>
+  <p style="color:var(--mut)">Ichi Skill, Star Academy and several primary schools</p>
+  <ul>
+    <li>Taught 100+ students; final-assignment results met 85% of requirements.</li>
+    <li>Teaching quality rating of 4.8/5.0 from the center, with positive feedback from parents.</li>
+    <li>Created teaching aids that raised engagement by 40% compared with traditional methods <mark class="todo">đo bằng gì, so với lớp nào</mark>.</li>
+  </ul>
+  <div class="grid" data-s="assets/teaching/te-01-class.jpg|Teaching;assets/teaching/te-02-class.jpg|Teaching;assets/teaching/te-03-class.jpg|Teaching;assets/teaching/te-04-class.jpg|Teaching;assets/teaching/te-05-rating.png|Rating and feedback (blurred)"></div>
+  <div class="logos" data-l="assets/logos/ichi-skill.svg|Ichi Skill;assets/logos/star-academy.svg|Star Academy"></div>
+  <h4>Administration</h4>
+  <p>Managed contracts, real estate records and legal documents at Saigon Cadastral; supported partner coordination, CRM and scheduling for the Director at ZA Office.</p>
+</section>
+
+<!-- ===== CONTACT ===== -->
+<section id="contact" class="band"><div>
+  <h2>Let’s talk about your next campaign.</h2>
+  <p><a href="mailto:job.bvdt@gmail.com">job.bvdt@gmail.com</a><br><a href="https://www.linkedin.com/in/buivuductam/">linkedin.com/in/buivuductam</a></p>
+  <div class="grid" style="max-width:200px" data-s="assets/brand/qr-linkedin.png|Scan to open LinkedIn"></div>
+</div></section>
+
+<footer>© Bui Vu Duc Tam</footer>
+
+<script>
+// Dựng ảnh và logo từ data-s / data-l. Ảnh thiếu file sẽ hiện ô nét đứt ghi tên file cần tải lên.
+document.querySelectorAll('[data-s]').forEach(e=>e.dataset.s.split(';').forEach(p=>{
+  const [f,c]=p.split('|'),g=document.createElement('figure'),i=new Image();
+  g.className='slot';g.dataset.file=f;i.src=f;i.alt=c;i.loading='lazy';
+  i.onerror=()=>g.classList.add('miss');
+  const cap=document.createElement('figcaption');cap.textContent=c;
+  g.append(i,cap);e.append(g);
+}));
+document.querySelectorAll('[data-l]').forEach(e=>e.dataset.l.split(';').forEach(p=>{
+  const [f,n]=p.split('|'),s=document.createElement('span'),i=new Image();
+  s.className='logo';i.src=f;i.alt=n;i.onerror=()=>i.replaceWith(n);
+  s.append(i);e.append(s);
+}));
+</script>
+</body>
+</html>
